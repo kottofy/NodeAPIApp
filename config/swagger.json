@@ -64,6 +64,36 @@
                 },
                 "deprecated": false
             }
+        },
+        "/add": {
+            "post": {
+                "summary": "Creates a new contact",
+                "tags": [
+                    "Contacts",
+                    "New"
+                ],
+                "operationId": "contacts_post",
+                "consumes": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "contact",
+                        "description": "contact to add",
+                        "schema": {
+                            "$ref": "#/definitions/Contact"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
         }
     },
     "definitions": {
